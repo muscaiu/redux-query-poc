@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Item from "../components/Item";
-import createStoriesList from "../../hocs/createStoriesList";
+import createStoriesList from "../hocs/createStoriesList";
 
 const StoriesList = props => {
   return (

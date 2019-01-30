@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import createItem from "../../hocs/createItem";
+import createItem from "../hocs/createItem";
 
 const Item = ({ item }) => {
   return (
