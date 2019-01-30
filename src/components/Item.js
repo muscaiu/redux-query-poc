@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-
+import React from "react";
 import createItem from "../hocs/createItem";
 
 const Item = ({ item }) => {
