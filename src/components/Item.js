@@ -1,29 +1,28 @@
 import React from "react";
+
 import createItem from "../hocs/createItem";
 
-const Item = ({ item }) => {
-  return (
-    <li>
-      {item && (
+const Item = ({ item }) => (
+  <li>
+    {item && (
+      <div>
         <div>
-          <div>
-            <a href={item.url} target="_blank">
-              {item.title}
-            </a>
-          </div>
-          <div>
-            {item.score} points by{" "}
-            <a
-              href={`https://news.ycombinator.com/user?id=${item.by}`}
-              target="_blank"
-            >
-              {item.by}
-            </a>
-          </div>
+          <a href={item.url} target="_blank">
+            {item.title}
+          </a>
         </div>
-      )}
-    </li>
-  );
-};
+        <div>
+          {item.score} points by{" "}
+          <a
+            href={`https://news.ycombinator.com/user?id=${item.by}`}
+            target="_blank"
+          >
+            {item.by}
+          </a>
+        </div>
+      </div>
+    )}
+  </li>
+);
 
 export default createItem(Item);
