@@ -3,18 +3,18 @@ import { compose } from "redux";
 import { connect } from "react-redux";
 import { connectRequest } from "redux-query";
 
-import { selectItem } from "../selectors/storiesSelectors";
-import { fetchItem } from "../actions/storiesActions";
+import { selectItem } from "../selectors/itemSelectors";
+import { postRequest } from "../queries/postsQueries";
 
 export default function(WrappedComponent) {
-  class ItemHoc extends PureComponent {
+  class PostHoc extends PureComponent {
     render() {
       return <WrappedComponent {...this.props} />;
     }
   }
 
   function mapStateToProps(state, props) {
-    const query = fetchItem(props.itemId);
+    const query = postRequest(props.postId);
     return {
       query,
       item: selectItem(state, props)
@@ -24,5 +24,5 @@ export default function(WrappedComponent) {
   return compose(
     connect(mapStateToProps),
     connectRequest(props => props.query)
-  )(ItemHoc);
+  )(PostHoc);
 }

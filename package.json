@@ -5,11 +5,12 @@
   "keywords": [],
   "main": "index.js",
   "dependencies": {
-    "redux-query": "2.2.0",
-    "redux": "3.7.2",
-    "react-redux": "5.0.6",
+    "normalizr": "^3.3.0",
+    "react": "16.0.0",
     "react-dom": "16.0.0",
-    "react": "16.0.0"
+    "react-redux": "5.0.6",
+    "redux": "3.7.2",
+    "redux-query": "2.2.0"
   },
   "devDependencies": {
     "react-scripts": "1.0.0"
