@@ -28,7 +28,6 @@ const createFetchTopStoriesQuery = () => {
     },
     update: {
       topStoryIds: (prev, next) => {
-        console.log('next:', next)
         // Discard previous `response` value (we don't need it anymore).
         return next;
       }
