@@ -12,9 +12,12 @@
     "react-dom": "16.0.0",
     "react-redux": "5.0.6",
     "redux": "3.7.2",
+    "redux-mock-store": "^1.5.3",
     "redux-query": "2.2.0"
   },
   "devDependencies": {
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.9.1",
     "react-scripts": "1.0.0"
   },
   "scripts": {
